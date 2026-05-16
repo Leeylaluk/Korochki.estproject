@@ -1,19 +1,13 @@
+import mysql from 'mysql2/promise'
 
-
-const mysql = require("mysql2");
-  
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: "v4",
-  password: "Gannex-qickyk-xeppy6"
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: 'Gannex-qickyk-xeppy6',
+  database: 'v4',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
- connection.connect(function(err){
-    if (err) {
-      return console.error("Ошибка: " + err.message);
-    }
-    else{
-      console.log("Подключение к серверу MySQL успешно установлено");
-    }
- });
- module.exports = connection;
+
+export default pool;
