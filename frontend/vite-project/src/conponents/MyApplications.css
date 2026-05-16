@@ -1,0 +1,124 @@
+/* src/components/MyApplications.css */
+.applications-container {
+    padding: 20px;
+    background: #f5f5f5;
+    min-height: calc(100vh - 60px);
+}
+
+.applications-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.applications-header h2 {
+    color: #333;
+}
+
+.applications-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.application-card-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.application-header h3 {
+    color: #667eea;
+    margin: 0;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-new {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.status-progress {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.status-completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-canceled {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.application-details {
+    margin-bottom: 15px;
+}
+
+.application-details p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.existing-review {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.review-section {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.review-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.review-section button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.review-section button:hover {
+    background: #5a67d8;
+}
+
+.no-applications {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 50px auto;
+    color: #888;
+}
