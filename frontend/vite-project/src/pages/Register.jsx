@@ -1,4 +1,3 @@
-// src/components/Register.js
 import React, { useState } from 'react';
 import './Register.css';
 
@@ -19,30 +18,26 @@ function Register({ onRegister, switchToLogin }) {
     };
 
     const validateForm = () => {
-        // ตรวจสอบ login (ละติน + ตัวเลข, อย่างน้อย 6 ตัว)
+            
         const loginRegex = /^[a-zA-Z0-9]{6,}$/;
         if (!loginRegex.test(formData.login)) {
             setError('Логин должен содержать минимум 6 символов (латиница и цифры)');
             return false;
         }
-        // ตรวจสอบ password (อย่างน้อย 8 ตัว)
         if (formData.password.length < 8) {
             setError('Пароль должен содержать минимум 8 символов');
             return false;
         }
-        // ตรวจสอบ ФИО (ซีริลลิก + เว้นวรรค)
         const nameRegex = /^[а-яА-ЯёЁ\s]+$/;
         if (!nameRegex.test(formData.full_name)) {
             setError('ФИО должно содержать только русские буквы и пробелы');
             return false;
         }
-        // ตรวจสอบ phone (รูปแบบ: 8(XXX)XXX-XX-XX)
         const phoneRegex = /^8\(\d{3}\)\d{3}-\d{2}-\d{2}$/;
         if (!phoneRegex.test(formData.phone)) {
             setError('Телефон должен быть в формате: 8(XXX)XXX-XX-XX');
             return false;
         }
-        // ตรวจสอบ email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
             setError('Введите корректный email');

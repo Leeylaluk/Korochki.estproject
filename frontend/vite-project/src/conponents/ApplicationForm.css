@@ -1,0 +1,42 @@
+/* src/components/ApplicationForm.css */
+.application-container {
+    padding: 20px;
+    background: #f5f5f5;
+    min-height: calc(100vh - 60px);
+}
+
+.application-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.application-card h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    background: white;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
